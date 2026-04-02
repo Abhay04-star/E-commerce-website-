@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Rosso lepanto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s ease;
+        }
+
+        header, footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .breadcrumbs {
+            font-size: 0.9em;
+            margin-bottom: 20px;
+        }
+
+        .breadcrumbs a {
+            text-decoration: none;
+            color: #555;
+        }
+
+        .breadcrumbs a:hover {
+            text-decoration: underline;
+        }
+
+        /* Carousel */
+        .carousel {
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 15px;
+        }
+
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-images img {
+            width: 200%;
+            height: 500px; /* Ensure all images are the same height */
+            object-fit: cover; /* Make sure the image covers the frame without distortion */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 50%;
+            z-index: 10;
+        }
+
+        .carousel-button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        footer {
+            margin-top: 20px;
+        }
+
+        /* Hover Effects */
+        .carousel-button:focus {
+            outline: none;
+        }
+
+        .carousel-images img:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
+        /* Description and features */
+        .marble-description {
+            text-align: center;
+            line-height: 1.6;
+            font-size: 1.1em;
+            color: #555;
+            margin-top: 20px;
+        }
+
+        .marble-description ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .marble-description ul li {
+            background: #f9f9f9;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Back to Gallery Button */
+        a.btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        a.btn:hover {
+            background-color: #555;
+            transform: scale(1.05);
+        }
+
+        /* Buy Now Button */
+        .buy-now-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #28a745; /* Green color to signify action */
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .buy-now-btn:hover {
+            background-color: #218838; /* Darker green on hover */
+            transform: scale(1.05);
+        }
+
+        /* Back to top button */
+        #backToTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50%;
+            font-size: 18px;
+            cursor: pointer;
+            display: none;
+            transition: all 0.3s ease;
+        }
+
+        #backToTop:hover {
+            background-color: #555;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .carousel-images img {
+                width: 100%;
+                height: 680px;
+            }
+
+            .marble-description {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Marble & Flooring Experts</h1>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <a href="projectdemo.html">Home</a> > <a href="projectdemo.html">Gallery</a> >  Rosso lepanto
+    </div>
+
+    <!-- Content Section -->
+    <div class="container">
+        <h1>Rosso Lepanto</h1>
+        <!-- Carousel Section -->
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="marble4.7.jpg" alt=" Rosso lepanto">
+                <img src="marble4.6.jpg" alt=" Rosso lepanto">
+                <img src="marble4.5.jpg" alt=" Rosso lepanto">
+                <img src="marble4.4.jpg" alt=" Rosso lepanto">
+            </div>
+            <!-- Left arrow -->
+            <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
+            <!-- Right arrow -->
+            <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+
+        <!-- Description Section -->
+        <div class="marble-description">
+            <p> Rosso lepanto is known for its exquisite veining and luxurious texture, making it perfect for both modern and traditional spaces. Available in a variety of finishes, this marble enhances the elegance of your home or office.</p>
+            <p><strong>Features:</strong></p>
+            <ul>
+                <li>Premium quality.</li>
+                <li>Durable and long-lasting.</li>
+                <li>Ideal for flooring, countertops, and walls.</li>
+            </ul>
+        </div>
+
+        <!-- Back to Gallery Link -->
+        <div class="back-link">
+            <a href="projectdemo.html" class="btn">Back to Gallery</a>
+        </div>
+
+        <!-- Back to Top Button -->
+        <button id="backToTop" onclick="scrollToTop()">↑</button>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Marble & Flooring Experts. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Carousel and Scroll to Top -->
+    <script>
+        let index = 0;
+
+        function moveSlide(step) {
+            const slides = document.querySelectorAll('.carousel-images img');
+            index += step;
+            if (index < 0) {
+                index = slides.length - 1;
+            } else if (index >= slides.length) {
+                index = 0;
+            }
+            document.querySelector('.carousel-images').style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        // Back to top button visibility
+        window.onscroll = function() {
+            const backToTopButton = document.getElementById('backToTop');
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+
+        // Function to scroll to top
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>

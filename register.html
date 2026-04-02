@@ -1,0 +1,127 @@
+<html lang="en">
+<head>
+    <title>Register</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #827c7c;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+        }
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #555;
+        }
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Register</h2>
+        <form id="registrationForm" action="register_process.php" method="POST" onsubmit="return validateRegistrationForm()">
+            <input type="text" id="username" name="username" placeholder="Username" required>
+            <span class="error" id="usernameError"></span>
+
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <span class="error" id="emailError"></span>
+
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <span class="error" id="passwordError"></span>
+
+            <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+            <span class="error" id="phoneError"></span>
+
+            <textarea id="address" name="address" placeholder="Address" required></textarea>
+            <span class="error" id="addressError"></span>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <script>
+        function validateRegistrationForm() {
+            let isValid = true;
+
+            // Clear previous errors
+            document.querySelectorAll(".error").forEach(error => error.textContent = "");
+
+            // Username validation
+            const username = document.getElementById("username").value.trim();
+            if (username.length < 3) {
+                document.getElementById("usernameError").textContent = "Username must be at least 3 characters long.";
+                isValid = false;
+            }
+
+            // Email validation
+            const email = document.getElementById("email").value.trim();
+            const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+            if (!emailPattern.test(email)) {
+                document.getElementById("emailError").textContent = "Enter a valid email address.";
+                isValid = false;
+            }
+
+            // Password validation
+            const password = document.getElementById("password").value;
+            if (password.length < 6) {
+                document.getElementById("passwordError").textContent = "Password must be at least 6 characters long.";
+                isValid = false;
+            }
+
+            // Phone number validation
+            const phone = document.getElementById("phone").value.trim();
+            const phonePattern = /^\d{10}$/;
+            if (!phonePattern.test(phone)) {
+                document.getElementById("phoneError").textContent = "Enter a valid 10-digit phone number.";
+                isValid = false;
+            }
+
+            // Address validation
+            const address = document.getElementById("address").value.trim();
+            if (address.length < 5) {
+                document.getElementById("addressError").textContent = "Address must be at least 5 characters long.";
+                isValid = false;
+            }
+
+            return isValid;
+        }
+    </script>
+</body>
+</html>

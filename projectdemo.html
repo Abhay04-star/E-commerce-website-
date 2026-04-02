@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeless Interiors & Marble</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-color: #9dd4d4;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        /* Sticky Header */
+        header {
+            background: #b0b5d3;
+            color: #fff;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #bbb;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url() no-repeat center center/cover;
+            height: 500px;
+            position: relative;
+            margin-top: 80px;
+        }
+
+        .hero-content {
+            color: #fff;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .hero h2 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 30px;
+            background: #e2eab5;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            margin-top: 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #81b5c0;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* About Section */
+        .about, .services, .gallery, .testimonials, .contact {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        /* Services Section */
+        .services {
+            background-color: #eee;
+        }
+
+        .service-box {
+            margin: 20px 0;
+        }
+
+        .service-box h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        /* Gallery Section */
+        .gallery-images {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .gallery-images img {
+            width: 48%;
+            margin: 10px 0;
+            border: 2px solid #ddd;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background-color: #f9f9f9;
+        }
+
+        .testimonial-box {
+            margin: 20px auto;
+            width: 60%;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .testimonial-box p {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .testimonial-box h4 {
+            margin-top: 15px;
+            color: #555;
+        }
+
+        /* Contact Section */
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin: auto;
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #555;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #81bec5;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Timeless Interiors & Marble</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Luxury Marble and Flooring Solutions</h2>
+            <p>Enhance your space with our premium marble and flooring services.</p>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We specialize in providing the finest marble and flooring solutions, tailored to meet the needs of homeowners, designers, and builders. With decades of experience, we ensure top-notch quality and customer satisfaction.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-box">
+                <h3>Marble Installation</h3>
+                <p>We provide high-quality marble installation for homes, offices, and commercial spaces.</p>
+            </div>
+            <div class="service-box">
+                <h3>Custom Flooring Design</h3>
+                <p>Create the perfect floor with our custom flooring design service. Choose from a variety of materials and styles.</p>
+            </div>
+            <div class="service-box">
+                <h3>Floor Polishing & Maintenance</h3>
+                <p>Keep your floors looking brand new with our polishing and maintenance services.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Gallery Section -->
+<section id="gallery" class="gallery">
+    <div class="container">
+        <h2>Gallery</h2>
+        <div class="gallery-images" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+            <div style="text-align: center;">
+                <img src="marble 1.1.jpg" alt="CALACATTA" style="width: 200px; height: 150px; object-fit: cover; border: 2px solid #ddd;">
+                <a href="marble1.html" class="btn">View Details</a>
+            </div>
+            <div style="text-align: center;">
+                <img src="marble2.1.jpg" alt=" italian marble" style="width: 200px; height: 150px; object-fit: cover; border: 2px solid #ddd;">
+                <a href="marble2.html" class="btn">View Details</a>
+            </div>
+            <div style="text-align: center;">
+                <img src="marble3.1.jpg" alt="antique green marble" style="width: 200px; height: 150px; object-fit: cover; border: 2px solid #ddd;">
+                <a href="marble3.html" class="btn">View Details</a>
+            </div>
+            <div style="text-align: center;">
+                <img src="marble4.1.jpg" alt="rosso lepanto" style="width: 200px; height: 150px; object-fit: cover; border: 2px solid #ddd;">
+                <a href="marble4.html" class="btn">View Details</a>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonial-box">
+                <p>"The marble floors installed in my home are absolutely stunning. The attention to detail is incredible!"</p>
+                <h4>– Sarah J.</h4>
+            </div>
+            <div class="testimonial-box">
+                <p>"They provided excellent customer service, and the floors have completely transformed our office space."</p>
+                <h4>– John D.</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Ready to transform your space? Get in touch with us for a free consultation or quote.</p>
+            <form action="contact-form.php" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            
+                <button type="submit">Submit</button>
+            </form>
+        
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Timeless Interiors & Marble. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for sticky header and smooth scrolling -->
+    <script src="scripts.js"></script>
+
+</body>
+</html>
